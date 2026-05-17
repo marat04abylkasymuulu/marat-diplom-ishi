@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "courses": "Курсы",
+    "schedule": "Расписание",
+    "teachers": "Преподаватели",
+    "achievements": "Достижения",
+    "reviews": "Отзывы",
+    "news": "Новости",
+    "contacts": "Контакты",
+    "language": "Язык сайта"
+  },
+  "hero": {
+    "title": "Подготовься к ОРТ/ЖРТ",
+    "subtitle": "С Рекордом!",
+    "description": "8+ лет опыта, сотни учеников набрали 200+ баллов",
+    "cta": "Записаться",
+    "cta_secondary": "Посмотреть курсы",
+    "chip_jrt": "ЖРТ",
+    "chip_ort": "ОРТ",
+    "badge_scores": "200+ баллов",
+    "badge_location": "Ош · КР"
+  },
+  "stats": {
+    "experience": "Лет опыта",
+    "students": "Учеников с 200+ баллами",
+    "certificates": "Золотых сертификатов",
+    "branches": "Филиалов",
+    "arena_caption": "Цифры говорят сами"
+  },
+  "about": {
+    "title": "О нас",
+    "history": "История",
+    "mission": "Миссия",
+    "director": "Директор",
+    "director_name": "Нишанов Шекербек",
+    "description": "Учебный центр \"Рекорд\" — лучший центр подготовки к ОРТ/ЖРТ в городе Ош. Наша цель — помочь каждому ученику набрать высокий балл.",
+    "mission_text": "Раскрыть потенциал каждого ученика и подготовить их к будущему."
+  },
+  "courses": {
+    "title": "Курсы",
+    "filter_all": "Все",
+    "duration": "Длительность",
+    "price": "Стоимость",
+    "start_date": "Дата начала",
+    "enroll": "Записаться",
+    "details": "Подробнее"
+  },
+  "schedule": {
+    "title": "Расписание",
+    "day": "День",
+    "time": "Время",
+    "course": "Курс",
+    "room": "Аудитория"
+  },
+  "teachers": {
+    "title": "Преподаватели",
+    "experience": "лет опыта",
+    "subject": "Предмет"
+  },
+  "achievements": {
+    "title": "Достижения",
+    "gold_certificates": "Золотые сертификаты",
+    "high_scorers": "Ученики с 200+ баллами"
+  },
+  "reviews": {
+    "title": "Отзывы",
+    "score": "баллов",
+    "watch_video": "Смотреть видео",
+    "leave_feedback": "Оставить отзыв",
+    "hide_form": "Скрыть форму",
+    "form_title": "Написать отзыв",
+    "your_rating": "Ваша оценка",
+    "your_review": "Ваш отзыв",
+    "which_course": "На каком курсе вы учились?",
+    "review_placeholder": "Напишите ваше мнение о центре Рекорд...",
+    "submit_feedback": "Отправить отзыв",
+    "feedback_success": "Ваш отзыв принят! Он будет опубликован после модерации.",
+    "moderation_note": "Отзыв будет опубликован на сайте после модерации.",
+    "student_feedbacks": "Отзывы учеников"
+  },
+  "news": {
+    "title": "Новости",
+    "read_more": "Читать далее",
+    "categories": {
+      "promo": "Акции",
+      "course": "Новые курсы",
+      "exam": "Новости ОРТ",
+      "general": "Общее"
+    }
+  },
+  "contacts": {
+    "title": "Контакты",
+    "address": "Адрес",
+    "phone": "Телефон",
+    "whatsapp": "WhatsApp",
+    "form_title": "Форма записи",
+    "form_name": "Ваше имя",
+    "form_phone": "Ваш телефон",
+    "form_message": "Сообщение",
+    "form_course": "Какой курс вас интересует?",
+    "form_submit": "Отправить",
+    "form_success": "Ваша заявка принята! Мы скоро свяжемся с вами.",
+    "map_openstreetmap": "OpenStreetMap",
+    "map_google_location": "Google (место)",
+    "map_2gis_location": "2GIS (место)",
+    "map_resolving": "Обрабатываем ссылку…",
+    "map_resolve_failed": "Не удалось разобрать ссылку. Вставьте src iframe встраивания или укажите широту и долготу.",
+    "map_placeholder_title": "Здесь появится карта",
+    "map_placeholder_help": "Вставьте короткую ссылку Google (maps.app.goo.gl), ссылку 2GIS или src iframe. Сервер откроет ссылку и возьмёт координаты; карта показывается через OpenStreetMap."
+  },
+  "footer": {
+    "rights": "Все права защищены",
+    "follow_us": "Подписывайтесь"
+  },
+  "promo": {
+    "discount": "Скидка 10%",
+    "limited": "Ограниченное время!"
+  }
+}

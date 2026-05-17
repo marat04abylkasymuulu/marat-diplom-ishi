@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Башкы бет",
+    "about": "Биз жөнүндө",
+    "courses": "Курстар",
+    "schedule": "Расписание",
+    "teachers": "Окутуучулар",
+    "achievements": "Жетишкендиктер",
+    "reviews": "Отзывдар",
+    "news": "Жаңылыктар",
+    "contacts": "Байланыштар",
+    "language": "Сайттын тили"
+  },
+  "hero": {
+    "title": "ЖРТ/ОРТго даярдан",
+    "subtitle": "Рекорд менен!",
+    "description": "8+ жылдык тажрыйба, жүздөгөн окуучулар 200+ балл алышкан",
+    "cta": "Жазылуу",
+    "cta_secondary": "Курстарды көрүү",
+    "chip_jrt": "ЖРТ",
+    "chip_ort": "ОРТ",
+    "badge_scores": "200+ балл",
+    "badge_location": "Ош · КР"
+  },
+  "stats": {
+    "experience": "Жылдык тажрыйба",
+    "students": "200+ балл алган окуучулар",
+    "certificates": "Алтын сертификаттар",
+    "branches": "Филиалдар",
+    "arena_caption": "Цифрлар сүйлөйт"
+  },
+  "about": {
+    "title": "Биз жөнүндө",
+    "history": "Тарых",
+    "mission": "Миссия",
+    "director": "Директор",
+    "director_name": "Нишанов Шекербек",
+    "description": "\"Рекорд\" окуу борбору — Ош шаарындагы эң мыкты ЖРТ/ОРТ даярдоо борбору. Биздин максат — ар бир окуучуга жогорку балл алууга жардам берүү.",
+    "mission_text": "Ар бир окуучунун потенциалын ачуу жана аларды келечекке даярдоо."
+  },
+  "courses": {
+    "title": "Курстар",
+    "filter_all": "Баары",
+    "duration": "Узактыгы",
+    "price": "Баасы",
+    "start_date": "Башталыш датасы",
+    "enroll": "Жазылуу",
+    "details": "Толугураак"
+  },
+  "schedule": {
+    "title": "Расписание",
+    "day": "Күн",
+    "time": "Убакыт",
+    "course": "Курс",
+    "room": "Аудитория"
+  },
+  "teachers": {
+    "title": "Окутуучулар",
+    "experience": "жыл тажрыйба",
+    "subject": "Предмет"
+  },
+  "achievements": {
+    "title": "Жетишкендиктер",
+    "gold_certificates": "Алтын сертификаттар",
+    "high_scorers": "200+ балл алган окуучулар"
+  },
+  "reviews": {
+    "title": "Отзывдар",
+    "score": "балл",
+    "watch_video": "Видео көрүү",
+    "leave_feedback": "Отзыв калтыруу",
+    "hide_form": "Форманы жашыруу",
+    "form_title": "Отзыв жазуу",
+    "your_rating": "Баалооңуз",
+    "your_review": "Отзывуңуз",
+    "which_course": "Кайсы курста окудуңуз?",
+    "review_placeholder": "Рекорд жөнүндө пикириңизди жазыңыз...",
+    "submit_feedback": "Отзыв жөнөтүү",
+    "feedback_success": "Отзывуңуз кабыл алынды! Модерациядан кийин жарыяланат.",
+    "moderation_note": "Отзывуңуз модерациядан өткөндөн кийин сайтта жарыяланат.",
+    "student_feedbacks": "Окуучулардын пикирлери"
+  },
+  "news": {
+    "title": "Жаңылыктар",
+    "read_more": "Толугураак окуу",
+    "categories": {
+      "promo": "Акциялар",
+      "course": "Жаңы курстар",
+      "exam": "ЖРТ жаңылыктары",
+      "general": "Жалпы"
+    }
+  },
+  "contacts": {
+    "title": "Байланыштар",
+    "address": "Дарек",
+    "phone": "Телефон",
+    "whatsapp": "WhatsApp",
+    "form_title": "Жазылуу формасы",
+    "form_name": "Аты-жөнүңүз",
+    "form_phone": "Телефон номериңиз",
+    "form_message": "Кошумча билдирүү",
+    "form_course": "Кайсы курска кызыгасыз?",
+    "form_submit": "Жөнөтүү",
+    "form_success": "Кайрылууңуз кабыл алынды! Тез арада байланышабыз.",
+    "map_openstreetmap": "OpenStreetMap",
+    "map_google_location": "Google (ордун көрсөтүү)",
+    "map_2gis_location": "2GIS (ордун көрсөтүү)",
+    "map_resolving": "Шилтеме текшерилүүдө…",
+    "map_resolve_failed": "Шилтеме иштетилген жок. Embed iframe src же кеңдик/узундук коюңуз.",
+    "map_placeholder_title": "Карта бул жерде көрүнөт",
+    "map_placeholder_help": "Google share шилтемесин (maps.app.goo.gl), 2GIS шилтемесин же embed iframe src коюңуз. Сервер шилтемени ачып координаталарды табат; карта OpenStreetMap аркылуу көрсөтүлөт."
+  },
+  "footer": {
+    "rights": "Бардык укуктар корголгон",
+    "follow_us": "Бизди ээрчиңиз"
+  },
+  "promo": {
+    "discount": "10% арзандатуу",
+    "limited": "Чектелген убакыт!"
+  }
+}

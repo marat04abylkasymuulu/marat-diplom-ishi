@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дипломдук иш — «Рекорд» окуу борборунун веб-тиркемесин иштеп чыгуу</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm 2cm 2cm 3cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14pt;
+            line-height: 1.5;
+            color: #000;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 2.5cm 2cm 2cm 3cm;
+            text-align: justify;
+        }
+        h1 {
+            font-size: 16pt;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 40pt;
+            margin-bottom: 20pt;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 15pt;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30pt;
+            margin-bottom: 15pt;
+        }
+        h3 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 20pt;
+            margin-bottom: 10pt;
+        }
+        h4 {
+            font-size: 14pt;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 15pt;
+            margin-bottom: 8pt;
+        }
+        p {
+            text-indent: 1.25cm;
+            margin: 0 0 10pt 0;
+        }
+        .no-indent {
+            text-indent: 0;
+        }
+        .title-page {
+            text-align: center;
+            page-break-after: always;
+            padding-top: 0;
+        }
+        .title-page p {
+            text-indent: 0;
+            margin: 5pt 0;
+        }
+        .title-page .university {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 30pt;
+        }
+        .title-page .faculty {
+            font-size: 13pt;
+            margin-top: 10pt;
+        }
+        .title-page .thesis-title {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-top: 80pt;
+            margin-bottom: 10pt;
+            text-transform: uppercase;
+        }
+        .title-page .subtitle {
+            font-size: 14pt;
+            margin-top: 10pt;
+            font-style: italic;
+        }
+        .title-page .author-info {
+            text-align: right;
+            margin-top: 80pt;
+            font-size: 13pt;
+        }
+        .title-page .city-year {
+            margin-top: 100pt;
+            font-size: 14pt;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .screenshot-placeholder {
+            border: 2px dashed #999;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 20pt 0;
+            font-style: italic;
+            color: #666;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .screenshot-placeholder.large {
+            min-height: 350px;
+        }
+        .figure-caption {
+            text-align: center;
+            font-size: 12pt;
+            font-style: italic;
+            margin-top: 5pt;
+            margin-bottom: 15pt;
+            text-indent: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15pt 0;
+            font-size: 12pt;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 6pt 8pt;
+            text-align: left;
+        }
+        th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+        .toc {
+            page-break-after: always;
+        }
+        .toc h1 {
+            margin-bottom: 30pt;
+        }
+        .toc-entry {
+            display: flex;
+            justify-content: space-between;
+            margin: 8pt 0;
+            text-indent: 0;
+        }
+        .toc-entry.sub {
+            padding-left: 1.25cm;
+        }
+        .toc-dots {
+            flex: 1;
+            border-bottom: 1px dotted #000;
+            margin: 0 5pt;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 11pt;
+            background: #f4f4f4;
+            padding: 2pt 4pt;
+        }
+        pre {
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            background: #f4f4f4;
+            padding: 10pt;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+            margin: 10pt 0;
+            line-height: 1.3;
+        }
+        ul, ol {
+            margin: 10pt 0;
+            padding-left: 2cm;
+        }
+        li {
+            margin: 5pt 0;
+        }
+        .annotation {
+            page-break-after: always;
+        }
+        @media print {
+            body { padding: 0; }
+            .screenshot-placeholder { border: 2px dashed #999; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== ТИТУЛДУК БЕТ ==================== -->
+<div class="title-page">
+    <p class="university">КЫРГЫЗ РЕСПУБЛИКАСЫНЫН БИЛИМ БЕРҮҮ ЖАНА ИЛИМ МИНИСТРЛИГИ</p>
+    <p class="university">[УНИВЕРСИТЕТТИН АТАЛЫШЫ]</p>
+    <p class="faculty">[Факультеттин аталышы]</p>
+    <p class="faculty">[Кафедранын аталышы]</p>
+
+    <p class="thesis-title">ДИПЛОМДУК ИШ</p>
+    <p class="subtitle">Тема: «Рекорд» окуу борборунун толук функционалдуу<br>веб-тиркемесин иштеп чыгуу</p>
+    <p class="subtitle">Багыты: Информатика жана эсептөө техникасы</p>
+
+    <div class="author-info">
+        <p><strong>Аткарган:</strong> [Курс] курстун студенти</p>
+        <p>Абылкасым уулу Алидин</p>
+        <p>&nbsp;</p>
+        <p><strong>Илимий жетекчи:</strong></p>
+        <p>[Илимий жетекчинин аты-жөнү, наамы]</p>
+    </div>
+
+    <p class="city-year">Ош — 2026</p>
+</div>
+
+<!-- ==================== МАЗМУНУ ==================== -->
+<div class="toc">
+    <h1>МАЗМУНУ</h1>
+
+    <div class="toc-entry"><span>КИРИШ СӨЗ</span><span class="toc-dots"></span><span>4</span></div>
+
+    <div class="toc-entry"><span><strong>I БӨЛҮМ. ТЕОРИЯЛЫК НЕГИЗДЕР</strong></span><span class="toc-dots"></span><span>6</span></div>
+    <div class="toc-entry sub"><span>1.1. Веб-тиркемелер жана алардын түрлөрү</span><span class="toc-dots"></span><span>6</span></div>
+    <div class="toc-entry sub"><span>1.2. Full-stack иштеп чыгуунун принциптери</span><span class="toc-dots"></span><span>8</span></div>
+    <div class="toc-entry sub"><span>1.3. REST API архитектурасы</span><span class="toc-dots"></span><span>10</span></div>
+    <div class="toc-entry sub"><span>1.4. Колдонулган технологияларды талдоо</span><span class="toc-dots"></span><span>12</span></div>
+    <div class="toc-entry sub"><span>1.5. Окшош системаларды салыштыруу</span><span class="toc-dots"></span><span>15</span></div>
+
+    <div class="toc-entry"><span><strong>II БӨЛҮМ. ДОЛБООРЛОО ЖАНА АРХИТЕКТУРА</strong></span><span class="toc-dots"></span><span>17</span></div>
+    <div class="toc-entry sub"><span>2.1. Системанын жалпы архитектурасы</span><span class="toc-dots"></span><span>17</span></div>
+    <div class="toc-entry sub"><span>2.2. Маалымат базасынын моделдери</span><span class="toc-dots"></span><span>19</span></div>
+    <div class="toc-entry sub"><span>2.3. API эндпоинттеринин долбоорлоосу</span><span class="toc-dots"></span><span>22</span></div>
+    <div class="toc-entry sub"><span>2.4. Фронтенд архитектурасы жана компоненттери</span><span class="toc-dots"></span><span>25</span></div>
+    <div class="toc-entry sub"><span>2.5. Коопсуздук архитектурасы (JWT)</span><span class="toc-dots"></span><span>28</span></div>
+
+    <div class="toc-entry"><span><strong>III БӨЛҮМ. ИШКЕ АШЫРУУ</strong></span><span class="toc-dots"></span><span>30</span></div>
+    <div class="toc-entry sub"><span>3.1. Backend: Django жана Django REST Framework</span><span class="toc-dots"></span><span>30</span></div>
+    <div class="toc-entry sub"><span>3.2. Frontend: React жана Vite</span><span class="toc-dots"></span><span>35</span></div>
+    <div class="toc-entry sub"><span>3.3. Көп тилдүүлүк системасы (i18n)</span><span class="toc-dots"></span><span>40</span></div>
+    <div class="toc-entry sub"><span>3.4. Админ панелдин ишке ашырылышы</span><span class="toc-dots"></span><span>43</span></div>
+    <div class="toc-entry sub"><span>3.5. WhatsApp жана Email интеграциясы</span><span class="toc-dots"></span><span>47</span></div>
+
+    <div class="toc-entry"><span><strong>IV БӨЛҮМ. ТЕСТИРЛӨӨ ЖАНА ДЕПЛОЙ</strong></span><span class="toc-dots"></span><span>49</span></div>
+    <div class="toc-entry sub"><span>4.1. Автоматташтырылган тесттер</span><span class="toc-dots"></span><span>49</span></div>
+    <div class="toc-entry sub"><span>4.2. Docker контейнеризация</span><span class="toc-dots"></span><span>52</span></div>
+    <div class="toc-entry sub"><span>4.3. CI/CD пайплайн (GitHub Actions)</span><span class="toc-dots"></span><span>55</span></div>
+    <div class="toc-entry sub"><span>4.4. Render.com'до деплой</span><span class="toc-dots"></span><span>57</span></div>
+
+    <div class="toc-entry"><span><strong>КОРУТУНДУ</strong></span><span class="toc-dots"></span><span>60</span></div>
+    <div class="toc-entry"><span><strong>КОЛДОНУЛГАН АДАБИЯТТАР</strong></span><span class="toc-dots"></span><span>62</span></div>
+    <div class="toc-entry"><span><strong>ТИРКЕМЕЛЕР</strong></span><span class="toc-dots"></span><span>64</span></div>
+</div>
+
+<!-- ==================== КИРИШ СӨЗ ==================== -->
+<div class="page-break">
+    <h1>КИРИШ СӨЗ</h1>
+
+    <h3>Теманын актуалдуулугу</h3>
+    <p>Азыркы заманда маалыматтык технологиялар билим берүү тармагына тереңден кирип, окутуунун сапатын жогорулатуу менен бирге, окуу борборлорунун иш процесстерин автоматташтыруу зарылдыгын жаратууда. Кыргызстандагы көптөгөн жеке окуу борборлору, анын ичинде ЖРТ/ОРТ (Жалпы Республикалык Тестирлөө / Общереспубликанское Тестирование) даярдоо борборлору, азырынча ата-энелер менен байланышууда, курстар жөнүндө маалымат жайылтууда жана студенттерди каттоодо заманбап санариптик куралдарды толук колдоно элек.</p>
+
+    <p>«Рекорд» окуу борбору — Ош шаарында 8 жылдан ашык тажрыйбасы бар, 200 ден ашык балл алган окуучулар менен алтын сертификаттарга ээ болгон ЖРТ/ОРТ даярдоо борбору. Бирок, борбордун маалыматтарын коомчулукка жана потенциалдуу студенттерге жеткирүү үчүн заманбап веб-тиркеме жок эле. Бул дипломдук иштин негизги максаты ушул маселелерди чечүү болуп саналат.</p>
+
+    <p>Бүгүнкү күндө Single Page Application (SPA) технологиялары, RESTful API'лер, контейнеризация (Docker) жана үзгүлтүксүз интеграция/жеткирүү (CI/CD) ыкмалары заманбап веб-иштеп чыгуунун стандарттарына айланган. Бул ыкмаларды колдонуу менен иштелген тиркеме масштабдуу, коопсуз жана колдонууга ыңгайлуу болот.</p>
+
+    <h3>Дипломдук иштин максаты</h3>
+    <p>«Рекорд» окуу борбору үчүн толук функционалдуу, көп тилдүү, заманбап full-stack веб-тиркеме иштеп чыгуу. Тиркеме коомдук сайт (студенттер жана ата-энелер үчүн) жана администрация панели (кызматкерлер үчүн) деген эки негизги бөлүктөн турат.</p>
+
+    <h3>Дипломдук иштин милдеттери</h3>
+    <p class="no-indent">Коюлган максатка жетүү үчүн төмөнкү милдеттер аныкталган:</p>
+    <ol>
+        <li>Окуу борборунун иш процесстерин талдоо жана техникалык тапшырма түзүү;</li>
+        <li>Системанын архитектурасын долбоорлоо (backend, frontend, маалымат базасы);</li>
+        <li>Django REST Framework менен RESTful API иштеп чыгуу;</li>
+        <li>React жана Vite менен SPA тиркемесин иштеп чыгуу;</li>
+        <li>Көп тилдүүлүк системасын (кыргызча, орусча, англисче) ишке ашыруу;</li>
+        <li>JWT аутентификация менен админ панелди ишке ашыруу;</li>
+        <li>WhatsApp жана Email интеграциялоо;</li>
+        <li>Автоматташтырылган тесттер жазуу;</li>
+        <li>Docker менен контейнеризациялоо жана CI/CD пайплайн түзүү;</li>
+        <li>Тиркемени Render.com платформасында деплой кылуу.</li>
+    </ol>
+
+    <h3>Изилдөөнүн объектиси</h3>
+    <p>«Рекорд» ЖРТ/ОРТ даярдоо борборунун маалыматтык-башкаруу процесстери.</p>
+
+    <h3>Изилдөөнүн предмети</h3>
+    <p>Full-stack веб-тиркемени иштеп чыгуунун методологиялары жана технологиялары.</p>
+
+    <h3>Иштин практикалык мааниси</h3>
+    <p>Иштелген веб-тиркеме реалдуу окуу борбору тарабынан колдонулуп, борбордун маалыматтык ачыктыгын жогорулатат, администрациянын жумушун жеңилдетет, жана потенциалдуу студенттер менен байланышты оңойлотот. Тиркеме https://record-frontend-f76k.onrender.com дарегинде жеткиликтүү.</p>
+
+    <h3>Иштин структурасы</h3>
+    <p>Дипломдук иш кириш сөздөн, 4 бөлүмдөн, корутундудан, колдонулган адабияттар тизмесинен жана тиркемелерден турат. Биринчи бөлүм теориялык негиздерге арналган. Экинчи бөлүмдө системанын архитектурасы долбоорлонот. Үчүнчү бөлүм ишке ашыруунун деталдарын камтыйт. Төртүнчү бөлүмдө тестирлөө жана деплой процесстери каралат.</p>
+</div>
+
+<!-- ==================== I БӨЛҮМ ==================== -->
+<div class="page-break">
+    <h1>I БӨЛҮМ. ТЕОРИЯЛЫК НЕГИЗДЕР</h1>
+
+    <h2>1.1. Веб-тиркемелер жана алардын түрлөрү</h2>
+
+    <p>Веб-тиркеме — бул колдонуучу веб-браузер аркылуу колдоно алган программалык камсыздоо. Салттуу десктоп тиркемелерден айырмаланып, веб-тиркемелер орнотууну талап кылбайт жана каалаган түзмөктөн (компьютер, телефон, планшет) жеткиликтүү.</p>
+
+    <p>Заманбап веб-тиркемелер бир нече түргө бөлүнөт:</p>
+
+    <h4>Статикалык веб-сайттар</h4>
+    <p>HTML, CSS жана JavaScript файлдарынан турган, серверде эч кандай иштетүүсүз түздөн-түз колдонуучуга жиберилген веб-барактар. Мисалы: портфолио сайттар, визитка-сайттар.</p>
+
+    <h4>Динамикалык веб-тиркемелер (Server-Side Rendering)</h4>
+    <p>Сервер тарабында HTML генерацияланып, ар бир суроо боюнча баракча кайра курулат. Мисалы: WordPress, традициялуу Django шаблондор.</p>
+
+    <h4>Single Page Application (SPA)</h4>
+    <p>Бир HTML баракчасы жүктөлүп, андан кийин JavaScript аркылуу бардык мазмун динамикалык түрдө жаңыланат. Бет жаңыртуусуз контент өзгөрөт — бул колдонуучу тажрыйбасын мобилдик тиркемеге жакындатат. React, Vue.js, Angular сыяктуу фреймворктор SPA түзүүнүн негизги куралдары.</p>
+
+    <p>Биздин долбоордо SPA архитектурасы тандалган, анткени:</p>
+    <ul>
+        <li>Колдонуучу тажрыйбасы жагымдуу — бет жаңыртуулары жок;</li>
+        <li>Frontend жана Backend бөлүнгөн — параллель иштеп чыгууга мүмкүнчүлүк;</li>
+        <li>API аркылуу кийинчерээк мобилдик тиркеме кошуу оңой;</li>
+        <li>Статик файлдарды CDN аркылуу тез жеткирүү мүмкүн.</li>
+    </ul>
+
+    <h2>1.2. Full-stack иштеп чыгуунун принциптери</h2>
+
+    <p>Full-stack иштеп чыгуу — бул веб-тиркеменин бардык катмарларын (frontend, backend, маалымат базасы, инфраструктура) бир иштеп чыгуучу же команда тарабынан ишке ашыруу. Бул ыкманын артыкчылыктары:</p>
+
+    <ul>
+        <li><strong>Бирдиктүү көз караш:</strong> Системанын бардык бөлүктөрүн түшүнгөн адам архитектуралык чечимдерди жакшыраак кабыл алат;</li>
+        <li><strong>Тезирээк иштеп чыгуу:</strong> Бир адам frontend менен backend ортосундагы интеграцияны тездетет;</li>
+        <li><strong>Акыркы колдонуучуга көңүл буруу:</strong> Техникалык чечимдер колдонуучу тажрыйбасына негизделет.</li>
+    </ul>
+
+    <p>Биздин долбоордогу full-stack архитектура:</p>
+
+    <div class="screenshot-placeholder">
+        <span>[ 1.1-сүрөт: Full-stack архитектуранын схемасы ]<br><br>
+        Frontend (React) ↔ REST API ↔ Backend (Django) ↔ Database (PostgreSQL)<br>
+        ↕<br>
+        Nginx (proxy/static)</span>
+    </div>
+    <p class="figure-caption">1.1-сүрөт. Долбоордун жалпы архитектуралык схемасы</p>
+
+    <h2>1.3. REST API архитектурасы</h2>
+
+    <p>REST (Representational State Transfer) — бул веб-сервистерди долбоорлоо үчүн архитектуралык стиль. Roy Fielding тарабынан 2000-жылы докторлук диссертациясында сунушталган.</p>
+
+    <p>REST принциптери:</p>
+    <ol>
+        <li><strong>Клиент-сервер:</strong> Frontend жана Backend бөлүнгөн, бири-бирине көз каранды эмес;</li>
+        <li><strong>Абалсыздык (Stateless):</strong> Ар бир суроо толук маалыматты камтыйт, сервер клиенттин абалын сактабайт;</li>
+        <li><strong>Кэштөө:</strong> Жоопторду кэштөө мүмкүнчүлүгү бар;</li>
+        <li><strong>Бирдиктүү интерфейс:</strong> Стандарттуу HTTP методдору (GET, POST, PUT, DELETE) колдонулат;</li>
+        <li><strong>Катмарлуу система:</strong> Клиент аралык серверлер (прокси, балансировщик) бар экенин билбейт.</li>
+    </ol>
+
+    <p>HTTP методдорунун маанилери:</p>
+    <table>
+        <tr><th>Метод</th><th>Максат</th><th>Мисал</th></tr>
+        <tr><td>GET</td><td>Маалымат алуу</td><td>GET /api/courses/ — бардык курстарды алуу</td></tr>
+        <tr><td>POST</td><td>Жаңы ресурс түзүү</td><td>POST /api/contact/ — жазылуу формасы жөнөтүү</td></tr>
+        <tr><td>PUT/PATCH</td><td>Ресурсту жаңылоо</td><td>PATCH /api/admin/courses/1/ — курсту өзгөртүү</td></tr>
+        <tr><td>DELETE</td><td>Ресурсту жок кылуу</td><td>DELETE /api/admin/courses/1/ — курсту өчүрүү</td></tr>
+    </table>
+
+    <h2>1.4. Колдонулган технологияларды талдоо</h2>
+
+    <h4>Backend: Django жана Django REST Framework</h4>
+    <p>Django — Python тилинде жазылган жогорку деңгээлдеги веб-фреймворк. «Батарейкалар менен» («batteries included») философиясы менен, Django ORM, аутентификация, админ панель, миграциялар сыяктуу компоненттерди камтыйт. Django REST Framework (DRF) — Django'нун үстүнө курулган RESTful API түзүү үчүн күчтүү тулкит.</p>
+
+    <p>Django тандалган себептер:</p>
+    <ul>
+        <li>Python — окууга оңой, жаңы баштагандар үчүн жеткиликтүү;</li>
+        <li>Коопсуздук — CSRF, XSS, SQL инъекция коргоолору камтылган;</li>
+        <li>ORM — SQL жазбай маалымат базасы менен иштөө;</li>
+        <li>Миграциялар — маалымат базасынын схемасын версиялоо;</li>
+        <li>Чоң коомчулук — көптөгөн пакеттер жана документация.</li>
+    </ul>
+
+    <h4>Frontend: React 19</h4>
+    <p>React — Facebook (Meta) тарабынан иштелген JavaScript китепканасы. Компоненттик архитектурага негизделген, Virtual DOM менен тез рендерлейт.</p>
+
+    <p>React тандалган себептер:</p>
+    <ul>
+        <li>Компоненттик архитектура — кайра колдонууга ылайыктуу UI бөлүктөрү;</li>
+        <li>Чоң экосистема — react-router, react-i18next, axios ж.б.;</li>
+        <li>Жумуш базарында эң талап кылынган frontend технология;</li>
+        <li>Hooks — функционалдык компоненттерде state башкаруу.</li>
+    </ul>
+
+    <h4>Vite — Build куралы</h4>
+    <p>Vite — заманбап frontend build куралы. Webpack'тен айырмаланып, HMR (Hot Module Replacement) абдан тез иштейт, нативдик ES модулдерин колдонот.</p>
+
+    <h4>Tailwind CSS</h4>
+    <p>Utility-first CSS фреймворку. Класстарды HTMLде түздөн-түз жазуу менен стилдөө — бул ыкма тез прототиптөө жана дизайн системаларды курууга ылайыктуу.</p>
+
+    <h4>PostgreSQL</h4>
+    <p>Дүйнө жүзүндө эң популярдуу ачык булактуу реляциялык маалымат базасынын башкаруу системасы (РМББС). ACID транзакциялары, JSON колдоосу, толук текст издөө жана масштабдуулук менен белгилүү.</p>
+
+    <h4>Docker</h4>
+    <p>Контейнеризация платформасы. Тиркемени бардык зависимостылары менен бирге изоляцияланган контейнерге салат — «менин машинамда иштейт» маселесин чечет.</p>
+
+    <h4>GitHub Actions</h4>
+    <p>CI/CD (Continuous Integration / Continuous Deployment) куралы. Код push кылганда автоматтуу тесттер, build жана деплой процесстерин ишке ашырат.</p>
+
+    <h2>1.5. Окшош системаларды салыштыруу</h2>
+
+    <p>Базарда окуу борборлору үчүн бир нече чечим бар:</p>
+
+    <table>
+        <tr><th>Критерий</th><th>WordPress + плагиндер</th><th>Tilda / Wix</th><th>Биздин чечим (React + Django)</th></tr>
+        <tr><td>Баасы</td><td>Бекер + хостинг</td><td>$15-30/ай</td><td>Бекер (Render free tier)</td></tr>
+        <tr><td>Ылайыкташтыруу</td><td>Орточо</td><td>Чектелген</td><td>Толук</td></tr>
+        <tr><td>Көп тилдүүлүк</td><td>Плагин менен</td><td>Чектелген</td><td>Толук (3 тил)</td></tr>
+        <tr><td>API</td><td>REST API плагин</td><td>Жок</td><td>Толук REST API</td></tr>
+        <tr><td>Админ панель</td><td>WordPress admin</td><td>Сайт редактору</td><td>Атайын React админ</td></tr>
+        <tr><td>Мобилдик тиркеме</td><td>Кыйын</td><td>Мүмкүн эмес</td><td>API даяр</td></tr>
+        <tr><td>Тездик</td><td>Жай (PHP)</td><td>Орточо</td><td>Тез (SPA + CDN)</td></tr>
+        <tr><td>Коопсуздук</td><td>Начар (плагин аялуулуктары)</td><td>Орточо</td><td>Жакшы (Django + JWT)</td></tr>
+    </table>
+
+    <p>Салыштыруу көрсөткөндөй, атайын иштелген full-stack тиркеме бардык критерийлер боюнча артыкчылыктарга ээ. Негизги артыкчылык — толук контроль жана масштабдуулук.</p>
+</div>
+
+<!-- ==================== II БӨЛҮМ ==================== -->
+<div class="page-break">
+    <h1>II БӨЛҮМ. ДОЛБООРЛОО ЖАНА АРХИТЕКТУРА</h1>
+
+    <h2>2.1. Системанын жалпы архитектурасы</h2>
+
+    <p>Система үч негизги катмардан турат:</p>
+    <ol>
+        <li><strong>Презентация катмары (Frontend)</strong> — React SPA тиркемеси, колдонуучу интерфейсин көрсөтөт;</li>
+        <li><strong>Бизнес-логика катмары (Backend)</strong> — Django REST API, маалыматтарды иштетет жана берет;</li>
+        <li><strong>Маалымат катмары (Database)</strong> — PostgreSQL, бардык маалыматтарды сактайт.</li>
+    </ol>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 2.1-сүрөт: Системанын архитектуралык диаграммасы ]<br><br>
+        Колдонуучу → Nginx → React (Static) → API суроолору → Django → PostgreSQL<br>
+        ↓<br>
+        Админ → React Admin Panel → JWT Auth → Django Admin API → PostgreSQL</span>
+    </div>
+    <p class="figure-caption">2.1-сүрөт. Системанын архитектуралык диаграммасы</p>
+
+    <p>Системанын негизги компоненттери:</p>
+
+    <table>
+        <tr><th>Компонент</th><th>Технология</th><th>Милдети</th></tr>
+        <tr><td>Frontend (коомдук)</td><td>React 19, Vite, Tailwind</td><td>Коомдук сайтты көрсөтүү</td></tr>
+        <tr><td>Frontend (админ)</td><td>React 19, JWT</td><td>Контент башкаруу UI</td></tr>
+        <tr><td>Backend API</td><td>Django 5.1, DRF</td><td>REST API, бизнес логика</td></tr>
+        <tr><td>Database</td><td>PostgreSQL 16</td><td>Маалыматтарды сактоо</td></tr>
+        <tr><td>Static файлдар</td><td>WhiteNoise</td><td>CSS/JS/сүрөттөрдү жеткирүү</td></tr>
+        <tr><td>Reverse Proxy</td><td>Nginx</td><td>Суроолорду маршруттоо</td></tr>
+        <tr><td>Контейнеризация</td><td>Docker, Docker Compose</td><td>Изоляция жана деплой</td></tr>
+        <tr><td>CI/CD</td><td>GitHub Actions</td><td>Автоматтык тест жана деплой</td></tr>
+    </table>
+
+    <h2>2.2. Маалымат базасынын моделдери</h2>
+
+    <p>Системада 10 негизги модель долбоорлонгон:</p>
+
+    <h4>CourseCategory — Курс категориялары</h4>
+    <table>
+        <tr><th>Талаа</th><th>Тиби</th><th>Сүрөттөмө</th></tr>
+        <tr><td>name_ky</td><td>CharField(100)</td><td>Кыргызча аталыш</td></tr>
+        <tr><td>name_ru</td><td>CharField(100)</td><td>Орусча аталыш</td></tr>
+        <tr><td>name_en</td><td>CharField(100)</td><td>Англисче аталыш (каалоо боюнча)</td></tr>
+        <tr><td>slug</td><td>SlugField</td><td>URL-friendly аталыш</td></tr>
+    </table>
+
+    <h4>Course — Курстар</h4>
+    <table>
+        <tr><th>Талаа</th><th>Тиби</th><th>Сүрөттөмө</th></tr>
+        <tr><td>category</td><td>ForeignKey</td><td>Категорияга шилтеме</td></tr>
+        <tr><td>title_ky, title_ru, title_en</td><td>CharField(200)</td><td>3 тилдик аталыш</td></tr>
+        <tr><td>description_ky, description_ru</td><td>TextField</td><td>Сүрөттөмө</td></tr>
+        <tr><td>duration</td><td>CharField(50)</td><td>Узактыгы (мис. «3 ай»)</td></tr>
+        <tr><td>price</td><td>DecimalField</td><td>Баасы (сом)</td></tr>
+        <tr><td>start_date</td><td>DateField</td><td>Башталыш датасы</td></tr>
+        <tr><td>image</td><td>ImageField</td><td>Курстун сүрөтү</td></tr>
+        <tr><td>is_active</td><td>BooleanField</td><td>Активдүүлүк статусу</td></tr>
+    </table>
+
+    <h4>Teacher — Окутуучулар</h4>
+    <table>
+        <tr><th>Талаа</th><th>Тиби</th><th>Сүрөттөмө</th></tr>
+        <tr><td>full_name_ky, full_name_ru</td><td>CharField(100)</td><td>Аты-жөнү</td></tr>
+        <tr><td>subject_ky, subject_ru</td><td>CharField(100)</td><td>Предмети</td></tr>
+        <tr><td>experience_years</td><td>IntegerField</td><td>Тажрыйбасы (жылдар)</td></tr>
+        <tr><td>photo</td><td>ImageField</td><td>Сүрөтү</td></tr>
+        <tr><td>bio_ky, bio_ru</td><td>TextField</td><td>Кыскача өмүр баян</td></tr>
+        <tr><td>is_active</td><td>BooleanField</td><td>Сайтта көрүнөбү</td></tr>
+        <tr><td>order</td><td>IntegerField</td><td>Көрсөтүү тартиби</td></tr>
+    </table>
+
+    <h4>Schedule — Расписание</h4>
+    <table>
+        <tr><th>Талаа</th><th>Тиби</th><th>Сүрөттөмө</th></tr>
+        <tr><td>course</td><td>ForeignKey</td><td>Курска шилтеме</td></tr>
+        <tr><td>day</td><td>CharField (choices)</td><td>Жума күнү (дүй-жек)</td></tr>
+        <tr><td>start_time, end_time</td><td>TimeField</td><td>Башталыш/бүтүш убактысы</td></tr>
+        <tr><td>room</td><td>CharField(50)</td><td>Аудитория</td></tr>
+    </table>
+
+    <h4>StudentFeedback — Студент отзывдары</h4>
+    <table>
+        <tr><th>Талаа</th><th>Тиби</th><th>Сүрөттөмө</th></tr>
+        <tr><td>student_name</td><td>CharField(100)</td><td>Студенттин аты</td></tr>
+        <tr><td>text</td><td>TextField</td><td>Отзыв тексти</td></tr>
+        <tr><td>rating</td><td>IntegerField(1-5)</td><td>Баалоо</td></tr>
+        <tr><td>status</td><td>CharField (choices)</td><td>pending / approved / rejected</td></tr>
+        <tr><td>created_at</td><td>DateTimeField</td><td>Жөнөтүлгөн убакыт</td></tr>
+    </table>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 2.2-сүрөт: ER-диаграмма (Entity Relationship) ]<br><br>
+        CourseCategory ←(1:N)— Course ←(1:N)— Schedule<br>
+        Teacher (standalone)<br>
+        Review, Achievement (standalone)<br>
+        StudentFeedback (standalone, moderated)<br>
+        NewsArticle (standalone)<br>
+        Branch, ContactSubmission (standalone)</span>
+    </div>
+    <p class="figure-caption">2.2-сүрөт. Маалымат базасынын ER-диаграммасы</p>
+
+    <h2>2.3. API эндпоинттеринин долбоорлоосу</h2>
+
+    <p>API эки топко бөлүнөт: коомдук (аутентификациясыз) жана админ (JWT token менен).</p>
+
+    <h4>Коомдук эндпоинттер</h4>
+    <table>
+        <tr><th>Метод</th><th>Endpoint</th><th>Сүрөттөмө</th></tr>
+        <tr><td>GET</td><td>/api/courses/</td><td>Активдүү курстардын тизмеси</td></tr>
+        <tr><td>GET</td><td>/api/categories/</td><td>Категориялар</td></tr>
+        <tr><td>GET</td><td>/api/schedule/</td><td>Расписание</td></tr>
+        <tr><td>GET</td><td>/api/teachers/</td><td>Активдүү окутуучулар</td></tr>
+        <tr><td>GET</td><td>/api/reviews/</td><td>Отзывдар</td></tr>
+        <tr><td>GET</td><td>/api/achievements/</td><td>Жетишкендиктер</td></tr>
+        <tr><td>GET</td><td>/api/news/</td><td>Жарыяланган жаңылыктар</td></tr>
+        <tr><td>GET</td><td>/api/branches/</td><td>Филиалдар</td></tr>
+        <tr><td>POST</td><td>/api/contact/</td><td>Кайрылуу жөнөтүү</td></tr>
+        <tr><td>GET/POST</td><td>/api/feedback/</td><td>Студент отзывдары</td></tr>
+    </table>
+
+    <h4>Админ эндпоинттери (JWT менен)</h4>
+    <table>
+        <tr><th>Метод</th><th>Endpoint</th><th>Сүрөттөмө</th></tr>
+        <tr><td>POST</td><td>/api/admin/token/</td><td>JWT токен алуу (логин)</td></tr>
+        <tr><td>POST</td><td>/api/admin/token/refresh/</td><td>Токен жаңылоо</td></tr>
+        <tr><td>GET</td><td>/api/admin/dashboard/</td><td>Статистика</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/courses/</td><td>Курстар башкаруу</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/categories/</td><td>Категориялар</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/teachers/</td><td>Окутуучулар</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/schedule/</td><td>Расписание</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/news/</td><td>Жаңылыктар</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/feedbacks/</td><td>Отзывдар модерация</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/achievements/</td><td>Жетишкендиктер</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/branches/</td><td>Филиалдар</td></tr>
+        <tr><td>CRUD</td><td>/api/admin/contacts/</td><td>Кайрылуулар</td></tr>
+    </table>
+
+    <h2>2.4. Фронтенд архитектурасы жана компоненттери</h2>
+
+    <p>Frontend тиркемеси компоненттик архитектурага негизделген. Ар бир бет жана UI элементи өзүнчө React компоненти.</p>
+
+    <h4>Коомдук беттер (9 бет)</h4>
+    <table>
+        <tr><th>Бет</th><th>Компонент</th><th>Функциясы</th></tr>
+        <tr><td>Башкы бет</td><td>Home.jsx</td><td>Hero, статистика, акциялар, тез байланыш</td></tr>
+        <tr><td>Биз жөнүндө</td><td>About.jsx</td><td>Тарых, миссия, директор</td></tr>
+        <tr><td>Курстар</td><td>Courses.jsx</td><td>Категория фильтри, курс карточкалары</td></tr>
+        <tr><td>Расписание</td><td>Schedule.jsx</td><td>Жумалык таблица</td></tr>
+        <tr><td>Окутуучулар</td><td>Teachers.jsx</td><td>Мугалимдердин карточкалары</td></tr>
+        <tr><td>Жетишкендиктер</td><td>Achievements.jsx</td><td>Статистика, студенттер</td></tr>
+        <tr><td>Отзывдар</td><td>Reviews.jsx</td><td>Пикирлер + отзыв калтыруу</td></tr>
+        <tr><td>Жаңылыктар</td><td>News.jsx</td><td>Жаңылыктар тизмеси</td></tr>
+        <tr><td>Байланыштар</td><td>Contacts.jsx</td><td>Филиалдар, форма, карта</td></tr>
+    </table>
+
+    <h4>Админ беттери (10 бет)</h4>
+    <table>
+        <tr><th>Бет</th><th>Компонент</th><th>Функциясы</th></tr>
+        <tr><td>Логин</td><td>Login.jsx</td><td>JWT аутентификация</td></tr>
+        <tr><td>Dashboard</td><td>Dashboard.jsx</td><td>Жалпы статистика</td></tr>
+        <tr><td>Курстар</td><td>CoursesAdmin.jsx</td><td>CRUD + категория башкаруу</td></tr>
+        <tr><td>Окутуучулар</td><td>TeachersAdmin.jsx</td><td>CRUD</td></tr>
+        <tr><td>Расписание</td><td>ScheduleAdmin.jsx</td><td>CRUD</td></tr>
+        <tr><td>Отзывдар</td><td>FeedbacksAdmin.jsx</td><td>Модерация (approve/reject)</td></tr>
+        <tr><td>Жетишкендиктер</td><td>AchievementsAdmin.jsx</td><td>CRUD</td></tr>
+        <tr><td>Жаңылыктар</td><td>NewsAdmin.jsx</td><td>CRUD + жарыялоо</td></tr>
+        <tr><td>Кайрылуулар</td><td>ContactsAdmin.jsx</td><td>Көрүү + иштетүү</td></tr>
+        <tr><td>Филиалдар</td><td>BranchesAdmin.jsx</td><td>CRUD</td></tr>
+    </table>
+
+    <h2>2.5. Коопсуздук архитектурасы (JWT)</h2>
+
+    <p>JSON Web Token (JWT) — бул коопсуз маалымат алмашуу үчүн стандарт (RFC 7519). Биздин системада админ панелдин аутентификациясы үчүн колдонулат.</p>
+
+    <p>JWT иштөө принциби:</p>
+    <ol>
+        <li>Колдонуучу логин/паролду жөнөтөт → <code>POST /api/admin/token/</code></li>
+        <li>Сервер текшерет → Access Token (12 саат) + Refresh Token (7 күн) кайтарат;</li>
+        <li>Ар бир суроодо Access Token <code>Authorization: Bearer &lt;token&gt;</code> header'де жөнөтүлөт;</li>
+        <li>Access Token мөөнөтү бүтсө, Refresh Token менен жаңысы алынат;</li>
+        <li>Refresh Token мөөнөтү бүтсө, кайра логин болуу керек.</li>
+    </ol>
+
+    <p>Артыкчылыктары:</p>
+    <ul>
+        <li>Сервер тарабында сессия сактоо зарылдыгы жок (stateless);</li>
+        <li>Горизонталдык масштабдоого ылайыктуу;</li>
+        <li>Мобилдик тиркемелерде дагы иштейт.</li>
+    </ul>
+
+    <div class="screenshot-placeholder">
+        <span>[ 2.5-сүрөт: JWT аутентификация агымынын диаграммасы ]<br><br>
+        Client → POST /token (username, password) → Server<br>
+        Server → {access_token, refresh_token} → Client<br>
+        Client → GET /api/admin/courses (Authorization: Bearer token) → Server<br>
+        Server → {data} → Client</span>
+    </div>
+    <p class="figure-caption">2.5-сүрөт. JWT аутентификация агымы</p>
+</div>
+
+<!-- ==================== III БӨЛҮМ ==================== -->
+<div class="page-break">
+    <h1>III БӨЛҮМ. ИШКЕ АШЫРУУ</h1>
+
+    <h2>3.1. Backend: Django жана Django REST Framework</h2>
+
+    <h4>Долбоордун структурасы</h4>
+    <pre>
+backend/
+├── config/             # Негизги жөндөөлөр
+│   ├── settings.py     # Django settings
+│   ├── urls.py         # URL маршруттоо
+│   └── wsgi.py         # WSGI кирүү чекити
+├── courses/            # Курстар аппи
+│   ├── models.py       # CourseCategory, Course, Schedule
+│   ├── serializers.py  # DRF серализаторлор
+│   ├── views.py        # API көрүнүштөр
+│   └── tests.py        # Тесттер
+├── teachers/           # Окутуучулар аппи
+├── reviews/            # Отзывдар + жетишкендиктер
+├── news/               # Жаңылыктар аппи
+├── contacts/           # Байланыштар аппи
+├── admin_api/          # Админ CRUD API
+│   ├── permissions.py  # IsAdminUser
+│   ├── serializers.py  # Админ серализаторлор
+│   ├── views.py        # ViewSet'тер
+│   └── urls.py         # Админ маршруттар
+├── requirements.txt    # Python зависимостылар
+├── Dockerfile          # Docker image
+├── build.sh            # Render build скрипт
+└── manage.py           # Django CLI
+    </pre>
+
+    <h4>Модель мисалы (Course)</h4>
+    <pre>
+class Course(models.Model):
+    category = models.ForeignKey(
+        CourseCategory, on_delete=models.CASCADE,
+        related_name='courses'
+    )
+    title_ky = models.CharField(max_length=200)
+    title_ru = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200, blank=True)
+    description_ky = models.TextField(blank=True)
+    description_ru = models.TextField(blank=True)
+    duration = models.CharField(max_length=50)
+    price = models.DecimalField(max_digits=10, decimal_places=0)
+    start_date = models.DateField(null=True, blank=True)
+    image = models.ImageField(upload_to='courses/', blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.title_ru
+    </pre>
+
+    <h4>Serializer мисалы</h4>
+    <pre>
+class CourseSerializer(serializers.ModelSerializer):
+    category_name = serializers.CharField(
+        source='category.name_ru', read_only=True
+    )
+    schedules = ScheduleSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Course
+        fields = '__all__'
+    </pre>
+
+    <h4>ViewSet мисалы</h4>
+    <pre>
+class CourseViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = CourseSerializer
+    queryset = Course.objects.filter(is_active=True)
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        category = self.request.query_params.get('category')
+        if category:
+            qs = qs.filter(category__slug=category)
+        return qs
+    </pre>
+
+    <p>Бул ыкма менен бардык негизги операциялар (CRUD) минималдуу код менен ишке ашырылат. DRF'тин ViewSet жана Router системасы URL маршруттарды автоматтуу генерациялайт.</p>
+
+    <h4>Маалымат базасынын конфигурациясы</h4>
+    <pre>
+DATABASES = {
+    "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+    )
+}
+    </pre>
+    <p>Бул конфигурация <code>DATABASE_URL</code> чөйрө өзгөрмөсүнөн маалымат базасынын дарегин окуйт. Эгер өзгөрмө жок болсо, локалдык SQLite колдонулат. Продакшнда PostgreSQL колдонулат.</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.1-сүрөт: Django Admin панелинин скриншоту ]<br><br>
+        http://localhost:8000/admin/ дарегинен алынган скриншот<br>
+        Моделдердин тизмеси: Courses, Teachers, Reviews, News, Contacts</span>
+    </div>
+    <p class="figure-caption">3.1-сүрөт. Django Admin панели</p>
+
+    <h2>3.2. Frontend: React жана Vite</h2>
+
+    <h4>Долбоордун структурасы</h4>
+    <pre>
+frontend/src/
+├── components/        # Жалпы компоненттер
+│   ├── Navbar.jsx     # Навигация + тил которгуч
+│   ├── Footer.jsx     # Сайттын төмөнкү бөлүгү
+│   └── WhatsAppButton.jsx  # Калкып чыгуучу баскыч
+├── pages/             # Коомдук беттер
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Courses.jsx
+│   ├── Schedule.jsx
+│   ├── Teachers.jsx
+│   ├── Achievements.jsx
+│   ├── Reviews.jsx
+│   ├── News.jsx
+│   └── Contacts.jsx
+├── admin/             # Админ панель
+│   ├── AuthContext.jsx      # JWT аутентификация контексти
+│   ├── components/
+│   │   ├── AdminLayout.jsx  # Админ layout + sidebar
+│   │   └── FormModal.jsx    # Жалпы модал
+│   └── pages/               # Админ CRUD беттер
+│       ├── Login.jsx
+│       ├── Dashboard.jsx
+│       ├── CoursesAdmin.jsx
+│       └── ...
+├── locales/           # Которуулар
+│   ├── ky/translation.json  # Кыргызча
+│   ├── ru/translation.json  # Орусча
+│   └── en/translation.json  # Англисче
+├── utils/
+│   └── api.js         # Axios API client
+├── App.jsx            # Маршруттоо
+└── main.jsx           # Кирүү чекити
+    </pre>
+
+    <h4>React компонент мисалы (Courses.jsx — кыскартылган)</h4>
+    <pre>
+export default function Courses() {
+  const { t } = useTranslation();
+  const [courses, setCourses] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState('');
+
+  useEffect(() => {
+    getCategories().then(res => setCategories(res.data));
+  }, []);
+
+  useEffect(() => {
+    getCourses(activeCategory || undefined)
+      .then(res => setCourses(res.data.results || res.data));
+  }, [activeCategory]);
+
+  return (
+    &lt;div&gt;
+      {/* Категория фильтри */}
+      {categories.map(cat => (
+        &lt;button onClick={() => setActiveCategory(cat.slug)}&gt;
+          {cat.name_ky}
+        &lt;/button&gt;
+      ))}
+      {/* Курс карточкалары */}
+      {courses.map(course => (
+        &lt;CourseCard key={course.id} course={course} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+    </pre>
+
+    <h4>Маршруттоо (App.jsx)</h4>
+    <pre>
+&lt;BrowserRouter&gt;
+  &lt;Routes&gt;
+    {/* Коомдук маршруттар */}
+    &lt;Route path="/" element={&lt;PublicLayout /&gt;}&gt;
+      &lt;Route index element={&lt;Home /&gt;} /&gt;
+      &lt;Route path="about" element={&lt;About /&gt;} /&gt;
+      &lt;Route path="courses" element={&lt;Courses /&gt;} /&gt;
+      &lt;Route path="schedule" element={&lt;Schedule /&gt;} /&gt;
+      ...
+    &lt;/Route&gt;
+    {/* Админ маршруттары */}
+    &lt;Route path="/panel/login" element={&lt;Login /&gt;} /&gt;
+    &lt;Route path="/panel" element={&lt;AdminLayout /&gt;}&gt;
+      &lt;Route path="dashboard" element={&lt;Dashboard /&gt;} /&gt;
+      &lt;Route path="courses" element={&lt;CoursesAdmin /&gt;} /&gt;
+      ...
+    &lt;/Route&gt;
+  &lt;/Routes&gt;
+&lt;/BrowserRouter&gt;
+    </pre>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.2-сүрөт: Коомдук сайттын башкы бетинин скриншоту ]<br><br>
+        https://record-frontend-f76k.onrender.com дарегинен<br>
+        Hero блок, статистика, акциялар бөлүмдөрү көрүнүп турат</span>
+    </div>
+    <p class="figure-caption">3.2-сүрөт. Коомдук сайттын башкы бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.3-сүрөт: Курстар бетинин скриншоту ]<br><br>
+        Категория фильтри + курс карточкалары көрүнүп турат</span>
+    </div>
+    <p class="figure-caption">3.3-сүрөт. Курстар бети (категория фильтри менен)</p>
+
+    <h2>3.3. Көп тилдүүлүк системасы (i18n)</h2>
+
+    <p>Тиркеме 3 тилди колдойт: кыргызча (ky), орусча (ru), англисче (en). Ишке ашыруу эки жакта жүрөт:</p>
+
+    <h4>Backend тарабы</h4>
+    <p>Ар бир моделдин текст талааларында 3 тилдик варианты бар (мисалы: <code>title_ky</code>, <code>title_ru</code>, <code>title_en</code>). API бардык тилдерди кайтарат, frontend колдонуучунун тандаган тилин көрсөтөт.</p>
+
+    <h4>Frontend тарабы (react-i18next)</h4>
+    <p>Статикалык текст (навигация, баскычтар, формалар) <code>react-i18next</code> китепканасы аркылуу которулат:</p>
+
+    <pre>
+// locales/ky/translation.json
+{
+  "nav": {
+    "home": "Башкы бет",
+    "about": "Биз жөнүндө",
+    "courses": "Курстар",
+    "schedule": "Расписание",
+    "teachers": "Окутуучулар"
+  },
+  "hero": {
+    "title": "ЖРТ/ОРТго даярдан — Рекорд менен!",
+    "subtitle": "8+ жыл тажрыйба, 200+ балл алган окуучулар"
+  }
+}
+    </pre>
+
+    <pre>
+// locales/ru/translation.json
+{
+  "nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "courses": "Курсы",
+    "schedule": "Расписание",
+    "teachers": "Преподаватели"
+  }
+}
+    </pre>
+
+    <h4>Тил которгуч компоненти</h4>
+    <pre>
+function LanguageSwitcher() {
+  const { i18n } = useTranslation();
+  const languages = [
+    { code: 'ky', label: 'Кыр' },
+    { code: 'ru', label: 'Рус' },
+    { code: 'en', label: 'Eng' },
+  ];
+  return languages.map(lang => (
+    &lt;button
+      key={lang.code}
+      onClick={() => i18n.changeLanguage(lang.code)}
+      className={i18n.language === lang.code ? 'active' : ''}
+    &gt;
+      {lang.label}
+    &lt;/button&gt;
+  ));
+}
+    </pre>
+
+    <div class="screenshot-placeholder">
+        <span>[ 3.4-сүрөт: Тил которгучтун скриншоту ]<br><br>
+        Навигациядагы KYR | РУС | ENG баскычтары<br>
+        3 тилде мазмунду көрсөтүү</span>
+    </div>
+    <p class="figure-caption">3.4-сүрөт. Тил которгуч (3 тилдик колдоо)</p>
+
+    <h2>3.4. Админ панелдин ишке ашырылышы</h2>
+
+    <p>Админ панель техникалык билими жок кызматкерлер (рецепционист, директор) үчүн иштелген. Django Admin'ден айырмаланып, бул React менен жазылган атайын UI.</p>
+
+    <h4>AuthContext — JWT аутентификация</h4>
+    <pre>
+const AuthContext = createContext();
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
+
+  const login = async (username, password) => {
+    const { data } = await adminApi.post('/token/', {
+      username, password
+    });
+    localStorage.setItem('access_token', data.access);
+    localStorage.setItem('refresh_token', data.refresh);
+    // Колдонуучу маалыматын алуу
+    const userRes = await adminApi.get('/me/');
+    setUser(userRes.data);
+  };
+
+  const logout = () => {
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+    setUser(null);
+  };
+
+  return (
+    &lt;AuthContext.Provider value={{ user, login, logout }}&gt;
+      {children}
+    &lt;/AuthContext.Provider&gt;
+  );
+}
+    </pre>
+
+    <h4>Axios Interceptor — Автоматтык токен жаңылоо</h4>
+    <pre>
+adminApi.interceptors.response.use(
+  response => response,
+  async error => {
+    if (error.response?.status === 401) {
+      const refresh = localStorage.getItem('refresh_token');
+      const { data } = await axios.post('/api/admin/token/refresh/', {
+        refresh
+      });
+      localStorage.setItem('access_token', data.access);
+      // Кайра аракет
+      error.config.headers.Authorization = `Bearer ${data.access}`;
+      return adminApi(error.config);
+    }
+    return Promise.reject(error);
+  }
+);
+    </pre>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.5-сүрөт: Админ панелдин Dashboard скриншоту ]<br><br>
+        https://record-frontend-f76k.onrender.com/panel/dashboard<br>
+        Статистика карточкалары: курстар, кайрылуулар, күтүүдөгү отзывдар</span>
+    </div>
+    <p class="figure-caption">3.5-сүрөт. Админ панелдин Dashboard бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.6-сүрөт: Курсту кошуу/өзгөртүү формасынын скриншоту ]<br><br>
+        Админ панелдеги курс формасы: аталыш, категория, баа, сүрөт талаалары</span>
+    </div>
+    <p class="figure-caption">3.6-сүрөт. Админ панелде курс кошуу формасы</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 3.7-сүрөт: Отзывдарды модерациялоо скриншоту ]<br><br>
+        Күтүүдөгү отзывдар тизмеси + жарыялоо/четке кагуу баскычтары</span>
+    </div>
+    <p class="figure-caption">3.7-сүрөт. Отзывдарды модерациялоо</p>
+
+    <h2>3.5. WhatsApp жана Email интеграциясы</h2>
+
+    <h4>WhatsApp интеграциясы</h4>
+    <p>WhatsApp'тын <code>wa.me</code> API'си колдонулат. Колдонуучу баскычты баскандa, даяр тексти бар WhatsApp чат терезеси ачылат:</p>
+
+    <pre>
+export function getWhatsAppLink(language = 'ky') {
+  const WHATSAPP_NUMBER = '996555000000';
+  const messages = {
+    ky: 'Саламатсызбы! Мен «Рекорд» борборунун курстары жөнүндө билгим келет.',
+    ru: 'Здравствуйте! Хочу узнать о курсах центра «Рекорд».',
+    en: 'Hello! I want to learn about Record center courses.',
+  };
+  const text = encodeURIComponent(messages[language] || messages.ky);
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+}
+    </pre>
+
+    <h4>Email билдирүүлөр</h4>
+    <p>Жаңы кайрылуу же отзыв келгенде, админге автоматтуу email жөнөтүлөт:</p>
+
+    <pre>
+def _send_notification_email(submission):
+    subject = f"Жаңы кайрылуу: {submission.full_name}"
+    message = f"""
+    Жаңы кайрылуу келди:
+    Аты: {submission.full_name}
+    Телефон: {submission.phone}
+    Курс: {submission.course_interest}
+    """
+    send_mail(
+        subject, message,
+        settings.DEFAULT_FROM_EMAIL,
+        [settings.ADMIN_EMAIL],
+        fail_silently=True,
+    )
+    </pre>
+
+    <div class="screenshot-placeholder">
+        <span>[ 3.8-сүрөт: WhatsApp баскычынын скриншоту ]<br><br>
+        Сайттын төмөнкү оң бурчунда калкып чыгуучу жашыл WhatsApp баскычы</span>
+    </div>
+    <p class="figure-caption">3.8-сүрөт. WhatsApp тез байланыш баскычы</p>
+</div>
+
+<!-- ==================== IV БӨЛҮМ ==================== -->
+<div class="page-break">
+    <h1>IV БӨЛҮМ. ТЕСТИРЛӨӨ ЖАНА ДЕПЛОЙ</h1>
+
+    <h2>4.1. Автоматташтырылган тесттер</h2>
+
+    <p>Тиркеменин сапатын камсыздоо үчүн эки деңгээлде тесттер жазылган:</p>
+
+    <h4>Backend тесттери (42 тест)</h4>
+    <p>Django'нун <code>TestCase</code> классын жана DRF'тин <code>APIClient</code> куралын колдонуу менен жазылган:</p>
+
+    <table>
+        <tr><th>Тест файлы</th><th>Тесттер</th><th>Камтылган функционал</th></tr>
+        <tr><td>courses/tests.py</td><td>9</td><td>Модель, API, админ CRUD, фильтрлөө</td></tr>
+        <tr><td>teachers/tests.py</td><td>6</td><td>Модель, көрүнүштүлүк, уруксаттар</td></tr>
+        <tr><td>reviews/tests.py</td><td>10</td><td>Отзывдар, feedback, approve/reject</td></tr>
+        <tr><td>news/tests.py</td><td>6</td><td>Жарыялоо, фильтрлөө, жашыруу</td></tr>
+        <tr><td>contacts/tests.py</td><td>6</td><td>Кайрылуу жөнөтүү, валидация</td></tr>
+        <tr><td colspan="3"><strong>Жалпы: 42 тест, 100% өткөн</strong></td></tr>
+    </table>
+
+    <h4>Тест мисалы</h4>
+    <pre>
+class CourseAdminAPITest(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+        self.admin = User.objects.create_superuser(
+            'admin', 'a@b.com', 'pass123'
+        )
+        self.client.force_authenticate(user=self.admin)
+        self.category = CourseCategory.objects.create(
+            name_ky='Тест', name_ru='Тест', slug='test'
+        )
+
+    def test_create_course(self):
+        response = self.client.post('/api/admin/courses/', {
+            'title_ky': 'Жаңы курс',
+            'title_ru': 'Новый курс',
+            'category': self.category.id,
+            'duration': '2 ай',
+            'price': '3000',
+        })
+        self.assertEqual(response.status_code, 201)
+
+    def test_unauthenticated_access_denied(self):
+        self.client.force_authenticate(user=None)
+        response = self.client.get('/api/admin/courses/')
+        self.assertEqual(response.status_code, 401)
+    </pre>
+
+    <h4>Frontend тесттери (Vitest)</h4>
+    <p>Vitest — Vite менен интеграцияланган тездик testing фреймворку. React Testing Library менен бирге колдонулат:</p>
+
+    <table>
+        <tr><th>Тест файлы</th><th>Тесттер</th><th>Камтылган функционал</th></tr>
+        <tr><td>App.test.jsx</td><td>1</td><td>App рендери, крашсыз иштөөсү</td></tr>
+        <tr><td>WhatsAppButton.test.jsx</td><td>2</td><td>Шилтеме генерация, target атрибуту</td></tr>
+        <tr><td>api.test.jsx</td><td>1</td><td>API модулдун экспорттору</td></tr>
+        <tr><td colspan="3"><strong>Жалпы: 4 тест, 100% өткөн</strong></td></tr>
+    </table>
+
+    <h4>Тесттерди иштетүү</h4>
+    <pre>
+# Backend
+cd backend
+python manage.py test --verbosity=2
+# Жыйынтык: Ran 42 tests in 4.194s — OK
+
+# Frontend
+cd frontend
+npx vitest --run
+# Жыйынтык: 3 test files passed, 4 tests passed
+    </pre>
+
+    <div class="screenshot-placeholder">
+        <span>[ 4.1-сүрөт: Тесттердин жыйынтыгынын скриншоту ]<br><br>
+        Terminal'де `python manage.py test` иштетилгенде<br>
+        42 тест өткөнү көрүнүп турат (OK)</span>
+    </div>
+    <p class="figure-caption">4.1-сүрөт. Backend тесттеринин жыйынтыгы</p>
+
+    <h2>4.2. Docker контейнеризация</h2>
+
+    <p>Docker — тиркемени бардык зависимостылары менен бирге изоляцияланган контейнерге салуу технологиясы. «Менин машинамда иштейт» маселесин чечет.</p>
+
+    <h4>Backend Dockerfile</h4>
+    <pre>
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libjpeg-dev zlib1g-dev && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+EXPOSE 8000
+ENTRYPOINT ["/entrypoint.sh"]
+    </pre>
+
+    <h4>Frontend Dockerfile (Multi-stage build)</h4>
+    <pre>
+# 1-этап: Build
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# 2-этап: Serve
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+    </pre>
+    <p>Multi-stage build колдонулганда акыркы image өлчөмү кичирейет (Node.js кереги жок, Nginx гана калат).</p>
+
+    <h4>Docker Compose — бир команда менен иштетүү</h4>
+    <pre>
+services:
+  backend:
+    build: ./backend
+    container_name: record-backend
+    env_file: ./backend/.env
+    volumes:
+      - media_data:/app/media
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c",
+        "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/')"]
+      interval: 10s
+
+  frontend:
+    build: ./frontend
+    container_name: record-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  media_data:
+    </pre>
+
+    <p>Иштетүү:</p>
+    <pre>
+docker compose up --build
+    </pre>
+
+    <div class="screenshot-placeholder">
+        <span>[ 4.2-сүрөт: Docker Compose иштеп жаткандагы terminal скриншоту ]<br><br>
+        `docker compose up --build` буйругунун жыйынтыгы:<br>
+        record-backend жана record-frontend контейнерлери иштеп жатат</span>
+    </div>
+    <p class="figure-caption">4.2-сүрөт. Docker Compose менен иштетүү</p>
+
+    <h2>4.3. CI/CD пайплайн (GitHub Actions)</h2>
+
+    <p>Continuous Integration / Continuous Deployment — код өзгөргөндө автоматтуу тесттер жана деплой процесси. Биздин системада GitHub Actions колдонулат.</p>
+
+    <h4>Пайплайн агымы</h4>
+    <pre>
+Push to main
+    │
+    ├── test-backend (Python 3.12)
+    │   └── python manage.py test
+    │
+    ├── test-frontend (Node.js 20)
+    │   ├── npm test -- --run
+    │   └── npm run build
+    │
+    └── build-and-push (main гана)
+        ├── Docker login
+        ├── Build backend image → push to Docker Hub
+        └── Build frontend image → push to Docker Hub
+    </pre>
+
+    <h4>GitHub Actions конфигурациясы (.github/workflows/ci.yml)</h4>
+    <pre>
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+        working-directory: backend
+      - run: python manage.py test --verbosity=2
+        working-directory: backend
+
+  test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci
+        working-directory: frontend
+      - run: npm test -- --run
+        working-directory: frontend
+
+  build-and-push:
+    needs: [test-backend, test-frontend]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: docker/login-action@v3
+      - uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          push: true
+          tags: alidin/record-backend:latest
+    </pre>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 4.3-сүрөт: GitHub Actions пайплайнынын скриншоту ]<br><br>
+        GitHub → Actions табында 3 job көрүнүп турат:<br>
+        ✅ test-backend (passed)<br>
+        ✅ test-frontend (passed)<br>
+        ✅ build-and-push (completed)</span>
+    </div>
+    <p class="figure-caption">4.3-сүрөт. GitHub Actions CI/CD пайплайны</p>
+
+    <h2>4.4. Render.com'до деплой</h2>
+
+    <p>Render.com — заманбап булут платформа, веб-тиркемелерди, маалымат базаларын жана статик сайттарды хостинг кылуу үчүн. Blueprint файлы аркылуу бүт инфраструктураны коддо аныктоо мүмкүн (Infrastructure as Code).</p>
+
+    <h4>render.yaml — Blueprint</h4>
+    <pre>
+databases:
+  - name: record-db
+    plan: free
+    databaseName: record_education
+
+services:
+  - type: web
+    name: record-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: ./build.sh
+    startCommand: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: record-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+
+  - type: web
+    name: record-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://record-backend-awf3.onrender.com/api/*
+    </pre>
+
+    <h4>Деплой процесси</h4>
+    <ol>
+        <li>GitHub'ка код push кылуу;</li>
+        <li>Render автоматтуу build баштайт;</li>
+        <li>Backend: зависимостылар орнотуу → миграция → admin түзүү → gunicorn баштоо;</li>
+        <li>Frontend: npm ci → build → статик файлдарды жарыялоо;</li>
+        <li>Healthcheck өткөндөн кийин сервис «Live» статусуна өтөт.</li>
+    </ol>
+
+    <h4>Деплойдун жыйынтыктары</h4>
+    <table>
+        <tr><th>Сервис</th><th>URL</th><th>Тиби</th></tr>
+        <tr><td>Frontend</td><td>https://record-frontend-f76k.onrender.com</td><td>Static Site</td></tr>
+        <tr><td>Backend</td><td>https://record-backend-awf3.onrender.com</td><td>Web Service</td></tr>
+        <tr><td>Database</td><td>(ички)</td><td>PostgreSQL 16</td></tr>
+    </table>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 4.4-сүрөт: Render Dashboard скриншоту ]<br><br>
+        3 сервис көрүнүп турат:<br>
+        ✅ record-backend — Deployed (Python 3)<br>
+        ✅ record-frontend — Deployed (Static)<br>
+        ✅ record-db — Available (PostgreSQL 16)</span>
+    </div>
+    <p class="figure-caption">4.4-сүрөт. Render.com Dashboard — бардык сервистер иштеп жатат</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ 4.5-сүрөт: Жандуу сайттын скриншоту ]<br><br>
+        https://record-frontend-f76k.onrender.com дареги ачылган,<br>
+        башкы бет толугу менен көрүнүп турат</span>
+    </div>
+    <p class="figure-caption">4.5-сүрөт. Жандуу сайт (production)</p>
+</div>
+
+<!-- ==================== КОРУТУНДУ ==================== -->
+<div class="page-break">
+    <h1>КОРУТУНДУ</h1>
+
+    <p>Бул дипломдук иштин алкагында «Рекорд» окуу борбору үчүн толук функционалдуу full-stack веб-тиркеме иштелип чыкты. Иштин негизги жыйынтыктары:</p>
+
+    <h3>Аткарылган милдеттер</h3>
+    <ol>
+        <li><strong>Системанын архитектурасы долбоорлонду</strong> — 3 катмарлуу архитектура (Frontend, Backend, Database) REST API принциптерине негизделген;</li>
+        <li><strong>Backend API иштелди</strong> — Django REST Framework менен 20+ эндпоинт, JWT аутентификация, пагинация, фильтрлөө;</li>
+        <li><strong>Frontend SPA иштелди</strong> — React 19 менен 19 бет (9 коомдук + 10 админ), заманбап дизайн (Tailwind CSS);</li>
+        <li><strong>Көп тилдүүлүк ишке ашырылды</strong> — 3 тил (кыргызча, орусча, англисче), моделдерде жана UI'де;</li>
+        <li><strong>Админ панель иштелди</strong> — техникалык билими жок кызматкерлер үчүн CRUD операциялары, модерация;</li>
+        <li><strong>Интеграциялар кошулду</strong> — WhatsApp (даяр текст менен), Email билдирүүлөр (жаңы кайрылууда);</li>
+        <li><strong>42 автоматтык тест жазылды</strong> — бардык моделдер, API'лер, уруксаттар камтылган;</li>
+        <li><strong>Docker менен контейнеризацияланды</strong> — бир команда менен (<code>docker compose up</code>) иштетүү мүмкүн;</li>
+        <li><strong>CI/CD пайплайн түзүлдү</strong> — GitHub Actions менен автоматтык тест → build → Docker Hub'ка push;</li>
+        <li><strong>Render.com'до деплой кылынды</strong> — сайт реалдуу интернетте иштеп жатат.</li>
+    </ol>
+
+    <h3>Практикалык баалуулугу</h3>
+    <p>Иштелген тиркеме реалдуу окуу борбору тарабынан колдонулууга даяр. Ал:</p>
+    <ul>
+        <li>Борбордун маалыматтык ачыктыгын жогорулатат;</li>
+        <li>Потенциалдуу студенттер менен байланышты жеңилдетет;</li>
+        <li>Администрациянын күнүмдүк жумушун автоматташтырат;</li>
+        <li>Мобилдик түзмөктөрдө жакшы иштейт;</li>
+        <li>API аркылуу мобилдик тиркемени кийин кошууга мүмкүнчүлүк берет.</li>
+    </ul>
+
+    <h3>Өнүктүрүү перспективалары</h3>
+    <p>Тиркемени мындан ары өнүктүрүүнүн багыттары:</p>
+    <ul>
+        <li>Онлайн төлөм интеграциясы (Mbank, Balance.kg);</li>
+        <li>Студенттер үчүн жеке кабинет (баалоо, домашка);</li>
+        <li>Push билдирүүлөр;</li>
+        <li>React Native менен мобилдик тиркеме (API даяр);</li>
+        <li>Аналитика дашборд (студент саны, кирешелер);</li>
+        <li>SEO оптимизация (Server-Side Rendering);</li>
+        <li>Cloudinary/S3 менен медиа файлдарды сактоо.</li>
+    </ul>
+
+    <h3>Жыйынтык</h3>
+    <p>Дипломдук иштин бардык коюлган милдеттери толук аткарылды. Заманбап технологияларды (React, Django, Docker, CI/CD) колдонуу менен масштабдуу, коопсуз жана колдонууга ыңгайлуу веб-тиркеме иштелди. Тиркеме продакшн чөйрөсүндө ийгиликтүү иштеп жатат.</p>
+</div>
+
+<!-- ==================== КОЛДОНУЛГАН АДАБИЯТТАР ==================== -->
+<div class="page-break">
+    <h1>КОЛДОНУЛГАН АДАБИЯТТАР</h1>
+
+    <ol>
+        <li>Django Documentation. — https://docs.djangoproject.com/en/5.1/ (каралган дата: 2026-жылдын майы).</li>
+        <li>Django REST Framework Documentation. — https://www.django-rest-framework.org/ (каралган дата: 2026-жылдын майы).</li>
+        <li>React Documentation. — https://react.dev/ (каралган дата: 2026-жылдын майы).</li>
+        <li>Vite Documentation. — https://vite.dev/ (каралган дата: 2026-жылдын майы).</li>
+        <li>Tailwind CSS Documentation. — https://tailwindcss.com/docs (каралган дата: 2026-жылдын майы).</li>
+        <li>Docker Documentation. — https://docs.docker.com/ (каралган дата: 2026-жылдын майы).</li>
+        <li>GitHub Actions Documentation. — https://docs.github.com/en/actions (каралган дата: 2026-жылдын майы).</li>
+        <li>PostgreSQL Documentation. — https://www.postgresql.org/docs/ (каралган дата: 2026-жылдын майы).</li>
+        <li>Fielding, R. T. Architectural Styles and the Design of Network-based Software Architectures. Doctoral Dissertation. University of California, Irvine, 2000.</li>
+        <li>Flanagan, D. JavaScript: The Definitive Guide, 7th Edition. O'Reilly Media, 2020. — 706 б.</li>
+        <li>Vincent, W. S. Django for Professionals: Production Websites with Python & Django. Still River Press, 2022. — 380 б.</li>
+        <li>Banks, A., Porcello, E. Learning React: Modern Patterns for Developing React Apps, 2nd Edition. O'Reilly Media, 2020. — 310 б.</li>
+        <li>Merkel, D. Docker: Lightweight Linux Containers for Consistent Development and Deployment. Linux Journal, 2014, № 239.</li>
+        <li>Render Documentation. — https://render.com/docs (каралган дата: 2026-жылдын майы).</li>
+        <li>JSON Web Tokens (RFC 7519). — https://datatracker.ietf.org/doc/html/rfc7519 (каралган дата: 2026-жылдын майы).</li>
+        <li>react-i18next Documentation. — https://react.i18next.com/ (каралган дата: 2026-жылдын майы).</li>
+        <li>Nginx Documentation. — https://nginx.org/en/docs/ (каралган дата: 2026-жылдын майы).</li>
+        <li>WhatsApp Business API. — https://developers.facebook.com/docs/whatsapp (каралган дата: 2026-жылдын майы).</li>
+    </ol>
+</div>
+
+<!-- ==================== ТИРКЕМЕЛЕР ==================== -->
+<div class="page-break">
+    <h1>ТИРКЕМЕЛЕР</h1>
+
+    <h2>Тиркеме А. Сайттын скриншоттору</h2>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.1: Башкы бет (толук скриншот) ]<br><br>
+        Hero блок + статистика + акциялар + WhatsApp баскычы</span>
+    </div>
+    <p class="figure-caption">А.1. Башкы бет</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.2: Курстар бети ]<br><br>
+        Категория фильтри + курс карточкалары</span>
+    </div>
+    <p class="figure-caption">А.2. Курстар бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.3: Окутуучулар бети ]<br><br>
+        Мугалимдердин карточкалары (сүрөт + маалымат)</span>
+    </div>
+    <p class="figure-caption">А.3. Окутуучулар бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.4: Расписание бети ]<br><br>
+        Жумалык расписание таблицасы</span>
+    </div>
+    <p class="figure-caption">А.4. Расписание бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.5: Отзывдар бети ]<br><br>
+        Студенттердин пикирлери + отзыв калтыруу формасы</span>
+    </div>
+    <p class="figure-caption">А.5. Отзывдар бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.6: Байланыштар бети ]<br><br>
+        Филиалдар + жазылуу формасы</span>
+    </div>
+    <p class="figure-caption">А.6. Байланыштар бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме А.7: Мобильдик версия ]<br><br>
+        Телефондогу көрүнүшү (responsive design)</span>
+    </div>
+    <p class="figure-caption">А.7. Мобильдик версия</p>
+
+    <h2>Тиркеме Б. Админ панелдин скриншоттору</h2>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме Б.1: Логин бети ]<br><br>
+        /panel/login — РЕКОРД логотиби + логин формасы</span>
+    </div>
+    <p class="figure-caption">Б.1. Админ логин бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме Б.2: Dashboard ]<br><br>
+        Статистика карточкалары + акыркы кайрылуулар</span>
+    </div>
+    <p class="figure-caption">Б.2. Админ Dashboard</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме Б.3: Курстар башкаруу ]<br><br>
+        Курстардын тизмеси + кошуу/өзгөртүү/жок кылуу баскычтары</span>
+    </div>
+    <p class="figure-caption">Б.3. Курстар башкаруу бети</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме Б.4: Жаңылыктар башкаруу ]<br><br>
+        Жаңылыктар тизмеси + жарыялоо статусу</span>
+    </div>
+    <p class="figure-caption">Б.4. Жаңылыктар башкаруу</p>
+
+    <h2>Тиркеме В. GitHub жана DevOps</h2>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме В.1: GitHub репозиторийинин скриншоту ]<br><br>
+        https://github.com/alidin000/record-education<br>
+        Файл структурасы жана акыркы коммиттер</span>
+    </div>
+    <p class="figure-caption">В.1. GitHub репозиторийи</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме В.2: GitHub Actions иштеп жатат ]<br><br>
+        CI/CD пайплайндын 3 этабы</span>
+    </div>
+    <p class="figure-caption">В.2. GitHub Actions CI/CD</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме В.3: Docker Hub'дагы image'дер ]<br><br>
+        https://hub.docker.com/repositories/alidin<br>
+        record-backend жана record-frontend image'дери</span>
+    </div>
+    <p class="figure-caption">В.3. Docker Hub репозиторийлери</p>
+
+    <div class="screenshot-placeholder large">
+        <span>[ Тиркеме В.4: Render.com Dashboard ]<br><br>
+        3 сервистин статусу: backend, frontend, database</span>
+    </div>
+    <p class="figure-caption">В.4. Render.com деплой Dashboard</p>
+</div>
+
+</body>
+</html>

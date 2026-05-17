@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "courses": "Courses",
+    "schedule": "Schedule",
+    "teachers": "Teachers",
+    "achievements": "Achievements",
+    "reviews": "Reviews",
+    "news": "News",
+    "contacts": "Contacts",
+    "language": "Site language"
+  },
+  "hero": {
+    "title": "Prepare for ORT/ZhRT",
+    "subtitle": "With Record!",
+    "description": "8+ years of experience, hundreds of students scored 200+",
+    "cta": "Enroll Now",
+    "cta_secondary": "View Courses",
+    "chip_jrt": "ZhRT",
+    "chip_ort": "ORT",
+    "badge_scores": "200+ score",
+    "badge_location": "Osh · KG"
+  },
+  "stats": {
+    "experience": "Years of Experience",
+    "students": "Students with 200+ Score",
+    "certificates": "Gold Certificates",
+    "branches": "Branches",
+    "arena_caption": "Let the numbers speak"
+  },
+  "about": {
+    "title": "About Us",
+    "history": "History",
+    "mission": "Mission",
+    "director": "Director",
+    "director_name": "Nishanov Shekerbek",
+    "description": "\"Record\" Education Center is the best ORT/ZhRT preparation center in Osh city. Our goal is to help every student achieve a high score.",
+    "mission_text": "Unlock the potential of every student and prepare them for the future."
+  },
+  "courses": {
+    "title": "Courses",
+    "filter_all": "All",
+    "duration": "Duration",
+    "price": "Price",
+    "start_date": "Start Date",
+    "enroll": "Enroll",
+    "details": "Details"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "day": "Day",
+    "time": "Time",
+    "course": "Course",
+    "room": "Room"
+  },
+  "teachers": {
+    "title": "Teachers",
+    "experience": "years of experience",
+    "subject": "Subject"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "gold_certificates": "Gold Certificates",
+    "high_scorers": "Students with 200+ Score"
+  },
+  "reviews": {
+    "title": "Reviews",
+    "score": "points",
+    "watch_video": "Watch Video",
+    "leave_feedback": "Leave a Review",
+    "hide_form": "Hide Form",
+    "form_title": "Write a Review",
+    "your_rating": "Your Rating",
+    "your_review": "Your Review",
+    "which_course": "Which course did you take?",
+    "review_placeholder": "Share your experience at Record center...",
+    "submit_feedback": "Submit Review",
+    "feedback_success": "Your review has been submitted! It will be published after moderation.",
+    "moderation_note": "Your review will appear on the site after moderation.",
+    "student_feedbacks": "Student Reviews"
+  },
+  "news": {
+    "title": "News",
+    "read_more": "Read More",
+    "categories": {
+      "promo": "Promotions",
+      "course": "New Courses",
+      "exam": "Exam News",
+      "general": "General"
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "address": "Address",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "form_title": "Enrollment Form",
+    "form_name": "Your Name",
+    "form_phone": "Your Phone",
+    "form_message": "Message",
+    "form_course": "Which course interests you?",
+    "form_submit": "Submit",
+    "form_success": "Your application has been received! We will contact you soon.",
+    "map_openstreetmap": "OpenStreetMap",
+    "map_google_location": "Google (location)",
+    "map_2gis_location": "2GIS (location)",
+    "map_resolving": "Resolving map link…",
+    "map_resolve_failed": "Could not resolve that link. Try the iframe embed URL, or set latitude and longitude on the branch.",
+    "map_placeholder_title": "Map will appear here",
+    "map_placeholder_help": "Paste a Google Maps share link (maps.app.goo.gl), a 2GIS link, or the iframe src from Google “Embed a map” / 2GIS embed. You can also set latitude and longitude — we show OpenStreetMap for share links after resolving the location on the server."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "follow_us": "Follow Us"
+  },
+  "promo": {
+    "discount": "10% Discount",
+    "limited": "Limited Time!"
+  }
+}
